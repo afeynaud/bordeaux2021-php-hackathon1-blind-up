@@ -2,7 +2,7 @@
 
 /**
  * Created by PhpStorm.
- * userdata: root
+ * userData: root
  * Date: 11/10/17
  * Time: 14:01
  */

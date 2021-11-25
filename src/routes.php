@@ -18,7 +18,9 @@
 ];*/
   
 return [
-      '' => ['HomeController', 'index',],
+      '' => ['UserController', 'connect',],
     'user/inscription' => ['UserController', 'add',],
+    'game/tout-afficher'     => ['GameController', 'showAll', ['id'],],
+
   ];
 
