@@ -9,7 +9,6 @@ class GameController extends AbstractController
 
         return $this->twig->render(
             'Game/welcome.html.twig',
-
         );
     }
 }
