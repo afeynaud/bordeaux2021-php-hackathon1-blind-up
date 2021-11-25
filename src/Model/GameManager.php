@@ -15,13 +15,13 @@ class GameManager extends AbstractManager
         return $statement->fetchAll();
     }
 
-    public function showMusicsAuthor()
+    public function countMusics()
     {
-        $query = ("SELECT title
+        $query = ("SELECT COUNT(*)
                     FROM " . self::TABLE);
         $statement = $this->pdo->prepare($query);
         $statement->execute();
-        return $statement->fetchAll();
+        return $statement->fetch();
     }
 
     public function insert(array $music): int

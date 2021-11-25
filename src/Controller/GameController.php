@@ -44,7 +44,7 @@ class GameController extends AbstractController
                 $music['author'] = $musicAuthorRefactor->musicAuthorRefactor($authorRefactor);
                 $gameManager->insert($music);
             }
-            header('Location: /');
+            header('Location: /game');
         }
         return $this->twig->render('Game/game.html.twig');
     }
@@ -52,7 +52,26 @@ class GameController extends AbstractController
     public function showGameDatas()
     {
         $gameManager = new GameManager();
-        $music = $gameManager->selectOneById(4);
+        $countMusics = $gameManager->countMusics();
+        $countMusics = implode($countMusics);
+        $countMusics = intval($countMusics);
+        // $questionsNumber = 10;
+        $randomId = rand(1, $countMusics);
+        /*
+        $randomId = explode(',', $randomId);
+        $sameQuestionsId = $randomId;
+        var_dump($sameQuestionsId);
+        for ($i = 0; $i < $questionsNumber; $i++) {
+            if (in_array($randomId, $sameQuestionsId) === false) {
+                $randomId = rand(1, $countMusics);
+                $sameQuestionsId = array_push($sameQuestionsId, $randomId);
+            } else {
+                $i--;
+            }
+        }
+        var_dump($randomId);die;
+        */
+        $music = $gameManager->selectOneById($randomId);
         return $this->twig->render('Game/game.html.twig', [
             'music' => $music,
         ]);
