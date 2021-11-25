@@ -16,9 +16,10 @@
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
 ];*/
-  
-return [
-      '' => ['HomeController', 'index',],
-    'user/inscription' => ['UserController', 'add',],
-  ];
 
+return [
+      '' => ['UserController', 'connect',],
+    'user/inscription' => ['UserController', 'add',],
+    'game/tout-afficher'     => ['GameController', 'showAll', ['id'],],
+
+  ];
