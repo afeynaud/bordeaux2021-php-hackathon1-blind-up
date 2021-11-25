@@ -18,7 +18,8 @@
 ];*/
   
 return [
-      '' => ['HomeController', 'index',],
+      ''               => ['HomeController', 'index',],
     'user/inscription' => ['UserController', 'add',],
+    'user/profil'      => ['UserController', 'index', ['id']],
   ];
 

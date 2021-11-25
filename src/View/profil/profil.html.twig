@@ -1,0 +1,28 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    {{parent()}} - Mon profil
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid d-flex flex-wrap mb-5">
+    </div>
+    <div class="card mt-5 bg-opacity-75 bg-light col-lg-10 col-sm-12 mx-auto" xmlns="http://www.w3.org/1999/html">
+
+        <div class="m-auto card-body">
+            <div class="text-center">
+                <img src="https://avatars.githubusercontent.com/{{ user_data.github }}" class="rounded-pill" width="150px" height="150px" alt="profile">
+            </div>
+            <ul class="list-group disabled card-text text-justify mt-3">
+                <li  class="list-group disabled fs-5 lh-lg"><h1 class="display-6">Prénom</h1><small>{{ user_data.pseudo }}</small></li>
+                {% if session.register.id == user_data.id %}
+                    <li class="list-group disabled fs-5 lh-lg"> <h1 class="display-6 mt-3">Email </h1> <small>{{ user_data.mail }}</small></li>
+                {% endif %}
+                <li  class="list-group disabled fs-5 lh-lg"> <h1 class="display-6 mt-3">GitHub </h1> <small>{{ user_data.github_name }}</small></li>
+                <li class="list-group disabled fs-5 lh-lg"><h1 class="display-6 mt-3">Inscrit depuis le  <small>{{ user_data.created_at | date("d/m/Y") }}</small></h1></li>
+            </ul>
+        </div>
+    <div class="container text-center mt-3">
+        <img src="https://zupimages.net/up/21/47/pgdp.jpg" style="width:40%" height="auto">
+    </div>
+{% endblock %}
