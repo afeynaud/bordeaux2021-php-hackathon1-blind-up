@@ -66,12 +66,16 @@ class UserController extends AbstractController
                 $errors['idIncorrect'] = 'Vos identifiants de connexion sont incorrects';
             }
         }
-        return $this->twig->render('Home/index.html.twig', [ 'errors' => $errors]);
+        return $this->twig->render('Home/index.html.twig', [  'session' => $_SESSION , 'errors' => $errors]);
     }
 
     public function logout()
     {
         session_destroy();
         header('location: /');
+    }
+    public function profil()
+    {
+        return $this->twig->render('profil/profil.html.twig');
     }
 }

@@ -3,7 +3,14 @@
 <h1>blind up</h1>
 
 <a href="#" class="btn">Games</a>
-<a href="#" class="btn">profil</a>
-<a href="#" class="btn">Classement</a>
+<a href="/profil" class="btn">profil</a>
+<a href="#" class="btn">Classement</a><br>
+
+{% if session.register is not defined %}
+    <a class="nav-link m-3 fs-5 override-red-over active" href="/deconnecter"><i class="fas fa-sign-out-alt override-red"></i> Déconnexion</a>
+{% endif %}
+
+
+
 
 

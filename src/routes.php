@@ -21,10 +21,12 @@
 ];*/
 
 return [
-    '' => ['UserController', 'connect',],
-    'user/inscription' => ['UserController', 'add',],
-    'user/profil'      => ['UserController', 'index', ['id']],
+    ''                       => ['UserController', 'connect',],
+    'user/inscription'       => ['UserController', 'add',],
+    'profil'            => ['UserController', 'profil',],
     'game/tout-afficher'     => ['GameController', 'showAll', ['id'],],
-    'game' => ['GameController', 'showGameDatas'],
-    'addSong' => ['GameController', 'add'],
+    'game'                   => ['GameController', 'showGameDatas'],
+    'addSong'                => ['GameController', 'add'],
+    'deconnecter'            => ['UserController', 'logout'],
+    ''
   ];
