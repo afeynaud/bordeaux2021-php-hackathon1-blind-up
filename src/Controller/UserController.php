@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-
 use App\Model\UserManager;
 use App\Service\UserFormValidator;
 
@@ -38,8 +37,8 @@ class UserController extends AbstractController
                 $user['password'] = password_hash($user['password'], PASSWORD_DEFAULT);
                 $userId = $userManager->create($user);
                 $userData = $userManager->selectOneById($userId);
-                $_SESSION['register'] = $userData;
-                header('Location: /user/profil?id=' . $userId);
+                $_SESSION['user'] = $userData;
+                header('Location: /game/tout-afficher?id=' . $userId);
             }
         }
         return $this->twig->render(
@@ -58,8 +57,8 @@ class UserController extends AbstractController
             $userData = $userManager->selectOneByEmail($user['mail']);
             if ($userData) {
                 if (password_verify($user['password'], $userData['password'])) {
-                    $_SESSION['register'] = $userData;
-                    header('Location: /activite/tout-afficher');
+                    $_SESSION['user'] = $userData;
+                    header('Location: /game/tout-afficher');
                 } else {
                     $errors['idIncorrect'] = 'Vos identifiants de connexion sont incorrects';
                 }
@@ -67,7 +66,7 @@ class UserController extends AbstractController
                 $errors['idIncorrect'] = 'Vos identifiants de connexion sont incorrects';
             }
         }
-        return $this->twig->render('Home/index.html.twig', ['session' => $_SESSION, 'errors' => $errors]);
+        return $this->twig->render('Home/index.html.twig', [ 'errors' => $errors]);
     }
 
     public function logout()
@@ -75,7 +74,4 @@ class UserController extends AbstractController
         session_destroy();
         header('location: /');
     }
-
-
 }
-
