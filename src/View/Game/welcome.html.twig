@@ -1,0 +1,67 @@
+{% extends 'layout.html.twig' %}
+
+
+
+{% block content %}
+
+    {% if session.user is not empty %}
+        <div class="d-flex justify-content-end text-white me-4">
+            <p>Connecté en tant que {{ session.user.pseudo }} {{ session.user.pseudo }}</p>
+        </div>
+    {% endif %}
+
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <i class="fas fa-headphones"></i>
+                    <h3>Game 1</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <a href="#" type="button">PLAY</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <i class="fas fa-headphones"></i>
+                    <h3>Game 2</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <a href="#" type="button">Play</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                  <i class="fas fa-headphones"></i>
+                    <h3>Game 3</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <a href="#" type="button">PLAY</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+{% endblock %}
+

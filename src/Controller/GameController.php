@@ -76,4 +76,12 @@ class GameController extends AbstractController
             'music' => $music,
         ]);
     }
+  
+    public function showAll(): string
+    {
+
+        return $this->twig->render(
+            'Game/welcome.html.twig',
+        );
+    }
 }
