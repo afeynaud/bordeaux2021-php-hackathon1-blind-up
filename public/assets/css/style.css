@@ -13,6 +13,11 @@
     background-size: 400% 400%;
     animation: gradient 20s ease infinite;
 }
+
+.logo {
+    background-color: #1b1b2b;
+    color:#c0c0c0;
+}
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
