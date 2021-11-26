@@ -7,6 +7,11 @@ use App\Service\UserFormValidator;
 
 class UserController extends AbstractController
 {
+    public function index()
+    {
+        return $this->twig->render('profil/profil.html.twig');
+    }
+
     public function add(): string
     {
         $errors = [];

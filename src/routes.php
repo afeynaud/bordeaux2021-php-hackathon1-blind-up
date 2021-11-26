@@ -23,9 +23,10 @@
 return [
     '' => ['UserController', 'connect',],
     'user/inscription' => ['UserController', 'add',],
+    'user/profil'      => ['UserController', 'index', ['id']],
+    'game/tout-afficher'     => ['GameController', 'showAll', ['id'],],
     'game' => ['GameController', 'showGameDatas'],
     'addSong' => ['GameController', 'add'],
     'game/tout-afficher'     => ['GameController', 'showAll', ['id'],],
     'classement' => ['LeaderboardController', 'index',],
-
   ];
