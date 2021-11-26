@@ -53,10 +53,9 @@ class GameController extends AbstractController
     {
         $gameManager = new GameManager();
         $countMusics = $gameManager->countMusics();
-        $countMusics = implode($countMusics);
-        $countMusics = intval($countMusics);
-        // $questionsNumber = 10;
+        $countMusics = (int)($countMusics);
         $randomId = rand(1, $countMusics);
+
         /*
         $randomId = explode(',', $randomId);
         $sameQuestionsId = $randomId;
@@ -71,12 +70,34 @@ class GameController extends AbstractController
         }
         var_dump($randomId);die;
         */
+
         $music = $gameManager->selectOneById($randomId);
+
+        $questionResult = '';
+        $playerAnswer = '';
+        $gameAnswer = $gameManager->selectOneById($randomId);
+        $gameAnswer = $gameAnswer['author'];
+        $gameAnswer = str_replace(' ', '', $gameAnswer);
+        $gameAnswer = strtolower($gameAnswer);
+        $playerScore = 0;
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $playerAnswer = str_replace(' ', '', $playerAnswer);
+            $playerAnswer = strtolower($gameAnswer);
+            if ($playerAnswer === $gameAnswer) {
+                $playerScore += 100;
+                $questionResult = 'Bonne réponse !';
+            } else {
+                $questionResult = 'Dommage !';
+            }
+        }
         return $this->twig->render('Game/game.html.twig', [
             'music' => $music,
+            'questionResult' => $questionResult,
+
         ]);
     }
-  
+
     public function showAll(): string
     {
 

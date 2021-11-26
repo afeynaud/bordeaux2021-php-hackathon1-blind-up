@@ -21,7 +21,7 @@ class GameManager extends AbstractManager
                     FROM " . self::TABLE);
         $statement = $this->pdo->prepare($query);
         $statement->execute();
-        return $statement->fetch();
+        return $statement->fetch(\PDO::FETCH_COLUMN);
     }
 
     public function insert(array $music): int
