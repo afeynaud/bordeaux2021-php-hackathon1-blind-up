@@ -14,15 +14,15 @@
                 <img src="https://avatars.githubusercontent.com/{{ user_data.github }}" class="rounded-pill" width="150px" height="150px" alt="profile">
             </div>
             <ul class="list-group disabled card-text text-justify mt-3">
-                <li  class="list-group disabled fs-5 lh-lg"><h1 class="display-6">Prénom</h1><small>{{ user_data.pseudo }}</small></li>
+                <li  class="list-group disabled fs-5 lh-lg"><h1 class="display-6 text-dark">Prénom</h1><small>{{ user_data.pseudo }}</small></li>
                 {% if session.register.id == user_data.id %}
-                    <li class="list-group disabled fs-5 lh-lg"> <h1 class="display-6 mt-3">Email </h1> <small>{{ user_data.mail }}</small></li>
+                    <li class="list-group disabled fs-5 lh-lg"> <h1 class="display-6 mt-3 text-dark">Email </h1> <small>{{ user_data.mail }}</small></li>
                 {% endif %}
-                <li  class="list-group disabled fs-5 lh-lg"> <h1 class="display-6 mt-3">GitHub </h1> <small>{{ user_data.github_name }}</small></li>
-                <li class="list-group disabled fs-5 lh-lg"><h1 class="display-6 mt-3">Inscrit depuis le  <small>{{ user_data.created_at | date("d/m/Y") }}</small></h1></li>
+                <li  class="list-group disabled fs-5 lh-lg"> <h1 class="display-6 mt-3 text-dark">GitHub </h1> <small>{{ user_data.github_name }}</small></li>
+                <li class="list-group disabled fs-5 lh-lg"><h1 class="display-6 mt-3 text-dark">Inscrit depuis le  <small>{{ user_data.created_at | date("d/m/Y") }}</small></h1></li>
             </ul>
         </div>
-    <div class="container text-center mt-3">
-        <img src="https://zupimages.net/up/21/47/pgdp.jpg" style="width:40%" height="auto">
+    <div class="container justify-content-center mt-3 mb-4">
+        <img src="https://zupimages.net/up/21/47/pgdp.jpg" style="width:30%" height="auto">
     </div>
 {% endblock %}
