@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-
 use App\Model\UserManager;
 use App\Service\UserFormValidator;
 
@@ -70,7 +69,4 @@ class UserController extends AbstractController
         session_destroy();
         header('location: /');
     }
-
-
 }
-
