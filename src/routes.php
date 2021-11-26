@@ -15,11 +15,15 @@
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
+    'game' => ['GameController', 'showGameDatas'],
+    'game/tout-afficher'     => ['GameController', 'showAll', ['id'],],
+    'addSong' => ['GameController', 'add'],
 ];*/
 
 return [
-      '' => ['UserController', 'connect',],
+    '' => ['UserController', 'connect',],
     'user/inscription' => ['UserController', 'add',],
-    'game/tout-afficher'     => ['GameController', 'showAll', ['id'],],
+    'game' => ['GameController', 'showGameDatas'],
+    'addSong' => ['GameController', 'add'],
 
   ];
