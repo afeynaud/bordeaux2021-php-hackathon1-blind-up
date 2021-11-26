@@ -25,6 +25,7 @@ return [
     'user/inscription' => ['UserController', 'add',],
     'user/profil'      => ['UserController', 'index', ['id']],
     'game/tout-afficher'     => ['GameController', 'showAll', ['id'],],
-    'game' => ['GameController', 'showGameDatas'],
+    'game' => ['GameController', 'showGameDatas',['id']],
+    'game/answer-validation' => ['GameController', 'answerValidation'],
     'addSong' => ['GameController', 'add'],
   ];
