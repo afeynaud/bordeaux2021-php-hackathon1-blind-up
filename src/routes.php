@@ -19,15 +19,17 @@
     'game/tout-afficher'     => ['GameController', 'showAll', ['id'],],
     'addSong' => ['GameController', 'add'],
 ];*/
-
-return [
-    '' => ['UserController', 'connect',],
-    'user/inscription' => ['UserController', 'add',],
-    'user/profil'      => ['UserController', 'index', ['id']],
+  
+  return [
+    ''                       => ['UserController', 'connect',],
+    'profil'                 => ['UserController', 'profil',],
+    'user/inscription'       => ['UserController', 'add',],
+    'user/profil'            => ['UserController', 'index', ['id']],
+    'deconnecter'            => ['UserController', 'logout'],
     'game/tout-afficher'     => ['GameController', 'showAll', ['id'],],
-    'game' => ['GameController', 'showGameDatas',['id']],
+    'game'                   => ['GameController', 'showGameDatas',['id']],
     'game/answer-validation' => ['GameController', 'answerValidation'],
-    'addSong' => ['GameController', 'add'],
+    'addSong'                => ['GameController', 'add'],
     'game/tout-afficher'     => ['GameController', 'showAll', ['id'],],
-    'classement' => ['LeaderboardController', 'index',],
+    'classement'             => ['LeaderboardController', 'index',],
   ];

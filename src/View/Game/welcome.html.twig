@@ -1,9 +1,6 @@
 {% extends 'layout.html.twig' %}
 
-
-
 {% block content %}
-
     {% if session.user is not empty %}
         <div class="d-flex justify-content-end text-white me-4">
             <p>Connecté en tant que {{ session.user.pseudo }} {{ session.user.pseudo }}</p>
@@ -53,8 +50,6 @@
                 </div>
             </div>
         </div>
-
     </div>
-
 {% endblock %}
 
