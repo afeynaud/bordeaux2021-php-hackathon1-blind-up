@@ -5,14 +5,41 @@
 {% endblock %}
 
 {% block content %}
-<form class="" action="/addSong" method="post">
-    <div class="form-floating mb-3">
-        <input name="url" type="text" class="form-control rounded-4" id="adding-url" placeholder="url">
-        <label for="adding-url">Copie/Colle ton url ici</label>
+    <div class="">
+{#  {{ dump(music) }} #}
+        <div class='invisible'>
+            {% include 'components/_music-player.html.twig' %}
+        </div>
+        <p class='display-6 text-white'>Trouve l'auteur de cette musique !</p>
+        <p class='display-5 text-white'>{{ music.title_only }}</p>
+        <button id="play">Play</button>
+        <button id="stop">Stop</button>
+        <br><br>
+        <form class="" action="/game" method="post">
+            <div class="form-floating mb-3">
+                <input name="userAnswer" type="text" autocomplete="off" class="form-control rounded-4" id="user-answer">
+                <label for="user-answer">Donne ta réponse !</label>
+            </div>
+            <button id="btn-adding" name="adding" class="w-25 mb-2 btn btn-lg rounded-pill" type="submit">Envoyer</button>
+        </form>
+        <br><br>
+        <p class='display-2 text-white'>{{ questionResult }}</p>
+        <br><br>
+        <button id="question1" name="question1" class="w-25 mb-2 btn btn-lg rounded-pill float-left" type="submit">Question 1</button>
+        <button id="question2" name="question2" class="w-25 mb-2 btn btn-lg rounded-pill float-left" type="submit">Question 2</button>
+        <button id="question3" name="question3" class="w-25 mb-2 btn btn-lg rounded-pill float-left" type="submit">Question 3</button>
     </div>
-    <button id="btn-adding" name="adding" class="w-100 mb-2 btn btn-lg rounded-pill " type="submit">Envoyer</button>
-</form>
-    {{ dump(music) }}
-    {{ music.title_only }}
-    {{ music.author }}
+    <br><br>
+    <br><br>
+    <br><br>
+    <form class="" action="/addSong" method="post">
+        <div class="form-floating mb-3">
+            <input name="url" type="text" autocomplete="off" class="form-control rounded-4" id="adding-url" placeholder="url">
+            <label for="adding-url">Copie/Colle ton url ici</label>
+        </div>
+        <button id="btn-adding" name="adding" class="w-100 mb-2 btn btn-lg rounded-pill" type="submit">Envoyer</button>
+    </form>
+{% endblock %}
+{% block javascript %}
+<script src="assets/scripts/playMusicButtons.js"></script>
 {% endblock %}

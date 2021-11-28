@@ -13,6 +13,11 @@
     background-size: 400% 400%;
     animation: gradient 20s ease infinite;
 }
+
+.logo {
+    background-color: #1b1b2b;
+    color:#c0c0c0;
+}
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -214,4 +219,195 @@ h1{
     width:210px;
     margin:auto;
     margin-top:400px;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    line-height: 1.5;
+    transition: all .3s ease-in-out;
+    font-family: "Josefin Sans", Arial;
+}
+
+
+
+.card-leader{
+    background-color:#333;
+    min-height: 475px;
+    width: 275px;
+    border-radius: 15px;
+
+}
+
+.card .header{
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    color: #ddd;
+}
+
+.card .header .title{
+    font-weight: 300;
+}
+
+.one .sort{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 14.1px;
+}
+
+.one .sort .day{
+    padding: 0.4rem 1.2rem;
+    margin: 0 0.1rem;
+    cursor: pointer;
+}
+
+.one .sort .day.active,
+.one .sort .day:active{
+    background-color: #999;
+    border-radius: 25px;
+}
+
+
+
+.photo{
+    width: 75px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: inset 0 0 60px whitesmoke,
+    inset 10px 0 40px #f0f,
+    inset -10px 0 40px #0ff,
+    inset 10px 0 150px #f0f,
+    inset -10px 0 150px #0ff,
+    0 0 50px #fff,
+    -5px 0 80px #f0f,
+    5px 0 80px #0ff;;
+    margin: 1rem 0;
+}
+
+.main{
+    width: 85px;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.profile .person{
+    display: flex;
+    margin: 1rem 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile .person.first{
+    z-index: 10;
+    transform: translateY(-10%);
+}
+
+.first .fa-crown{
+    color: gold;
+    filter: drop-shadow(0px 0px 5px gold);
+}
+
+.num{
+    color: white;
+}
+
+.fa-caret-up{
+    color: #1b1b2b;
+    font-size: 21px;
+}
+
+.link{
+    margin: 0.2rem 0;
+    color: #fff;
+    margin-top: -0.3rem;
+    font-size: 13px;
+}
+
+.points{
+    color:#1b1b2b;
+    font-size: 17px;
+}
+
+.second{
+    margin-right: -0.7rem !important;
+}
+
+.third{
+    margin-left: -0.7rem !important;
+}
+
+.p_img{
+    width: 50px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.others{
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #999;
+}
+
+.info .points{
+    margin-left: 0.2rem;
+    margin-right: 1.2rem;
+}
+
+.info .link{
+    margin: 0 1rem;
+}
+
+.rank{
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+    flex-direction: column-reverse;
+}
+
+.rank i{
+    margin-top: -5px !important;
+}
+
+.rank .num{
+    margin: 0 !important;
+}
+.title
+{
+    color: #999;
+}
+.day
+{
+    color: #999;
 }

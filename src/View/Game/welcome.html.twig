@@ -1,9 +1,6 @@
 {% extends 'layout.html.twig' %}
 
-
-
 {% block content %}
-
     {% if session.user is not empty %}
         <div class="d-flex justify-content-end text-white me-4">
             <p>Connecté en tant que {{ session.user.pseudo }} {{ session.user.pseudo }}</p>
@@ -20,7 +17,7 @@
             </div>
             <div class="face face2">
                 <div class="content">
-                    <a href="#" type="button">PLAY</a>
+                    <a href="/game" type="button">PLAY</a>
                 </div>
             </div>
         </div>
@@ -34,7 +31,7 @@
             </div>
             <div class="face face2">
                 <div class="content">
-                    <a href="#" type="button">Play</a>
+                    <a href="/game" type="button">Play</a>
                 </div>
             </div>
         </div>
@@ -49,12 +46,10 @@
             </div>
             <div class="face face2">
                 <div class="content">
-                    <a href="#" type="button">PLAY</a>
+                    <a href="/game" type="button">PLAY</a>
                 </div>
             </div>
         </div>
     </div>
-
-
 {% endblock %}
 

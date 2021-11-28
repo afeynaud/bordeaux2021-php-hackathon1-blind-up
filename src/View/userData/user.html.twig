@@ -19,6 +19,10 @@
                 <input type="password" name="password" class="form-control rounded-0 rounded-bottom" id="floatingPassword">
                 <label for="floatingPassword">Mot de passe</label>
             </div>
+            <div class="form-group form-floating">
+                <input type="text" name="github_name" class="form-control rounded-0 rounded-bottom" id="floatingInput">
+                <label for="floatingInput">github</label>
+            </div>
             {% for error in errors %}
                 <div class="m-auto text-center">
                     <p class="text-danger">{{ error }}</p>
